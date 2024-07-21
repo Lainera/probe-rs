@@ -13,29 +13,23 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM1
-    range:
-      start: 0x20000000
-      end: 0x20003000
-    cores:
-    - main
-  - !Ram
-    name: SRAM2
-    range:
-      start: 0x20030000
-      end: 0x20039000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8050000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20000000
+      end: 0x20003000
+    cores:
+    - main
   flash_algorithms:
   - stm32wb1x_320_m4
 - name: STM32WB15CCUx
@@ -46,29 +40,23 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM1
-    range:
-      start: 0x20000000
-      end: 0x20003000
-    cores:
-    - main
-  - !Ram
-    name: SRAM2
-    range:
-      start: 0x20030000
-      end: 0x20039000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8050000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20000000
+      end: 0x20003000
+    cores:
+    - main
   flash_algorithms:
   - stm32wb1x_320_m4
 - name: STM32WB15CCUxE
@@ -79,29 +67,23 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM1
-    range:
-      start: 0x20000000
-      end: 0x20003000
-    cores:
-    - main
-  - !Ram
-    name: SRAM2
-    range:
-      start: 0x20030000
-      end: 0x20039000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8050000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20000000
+      end: 0x20003000
+    cores:
+    - main
   flash_algorithms:
   - stm32wb1x_320_m4
 - name: STM32WB15CCYx
@@ -112,29 +94,23 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM1
-    range:
-      start: 0x20000000
-      end: 0x20003000
-    cores:
-    - main
-  - !Ram
-    name: SRAM2
-    range:
-      start: 0x20030000
-      end: 0x20039000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8050000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20000000
+      end: 0x20003000
+    cores:
+    - main
   flash_algorithms:
   - stm32wb1x_320_m4
 - name: STM32WB1MMCHx
@@ -145,6 +121,15 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
+  - !Nvm
+    name: Main_Flash
+    range:
+      start: 0x8000000
+      end: 0x8050000
+    cores:
+    - main
+    access:
+      boot: true
   - !Ram
     name: SRAM1
     range:
@@ -159,15 +144,6 @@ variants:
       end: 0x20039000
     cores:
     - main
-  - !Nvm
-    name: Main_Flash
-    range:
-      start: 0x8000000
-      end: 0x8050000
-    cores:
-    - main
-    access:
-      boot: true
   flash_algorithms:
   - stm32wb1x_320_m4
 - name: STM32WB30CEUxA
@@ -178,22 +154,23 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM1
-    range:
-      start: 0x20000000
-      end: 0x20008000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20000000
+      end: 0x20008000
+    cores:
+    - main
   flash_algorithms:
   - stm32wb3x_512_m4
 - name: STM32WB35CCUxA
@@ -204,22 +181,23 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM1
-    range:
-      start: 0x20000000
-      end: 0x20008000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20000000
+      end: 0x20008000
+    cores:
+    - main
   flash_algorithms:
   - stm32wb3x_512_m4
 - name: STM32WB35CEUxA
@@ -230,22 +208,23 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM1
-    range:
-      start: 0x20000000
-      end: 0x20008000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20000000
+      end: 0x20008000
+    cores:
+    - main
   flash_algorithms:
   - stm32wb3x_512_m4
 - name: STM32WB50CGUx
@@ -256,22 +235,23 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM1
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20000000
+      end: 0x20010000
+    cores:
+    - main
   flash_algorithms:
   - stm32wb5x_m4_1024
 - name: STM32WB55CCUx
@@ -282,22 +262,23 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM1
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20000000
+      end: 0x20010000
+    cores:
+    - main
   flash_algorithms:
   - stm32wb5x_m4_1024
   - stm32wb55x_35x_m4_opt
@@ -309,22 +290,23 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM1
-    range:
-      start: 0x20000000
-      end: 0x20030000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20000000
+      end: 0x20030000
+    cores:
+    - main
   flash_algorithms:
   - stm32wb5x_m4_1024
   - stm32wb55x_35x_m4_opt
@@ -336,22 +318,23 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM1
-    range:
-      start: 0x20000000
-      end: 0x20030000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20000000
+      end: 0x20030000
+    cores:
+    - main
   flash_algorithms:
   - stm32wb5x_m4_1024
   - stm32wb55x_35x_m4_opt
@@ -363,22 +346,23 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM1
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20000000
+      end: 0x20010000
+    cores:
+    - main
   flash_algorithms:
   - stm32wb5x_m4_1024
   - stm32wb55x_35x_m4_opt
@@ -390,22 +374,23 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM1
-    range:
-      start: 0x20000000
-      end: 0x20030000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20000000
+      end: 0x20030000
+    cores:
+    - main
   flash_algorithms:
   - stm32wb5x_m4_1024
   - stm32wb55x_35x_m4_opt
@@ -417,22 +402,23 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM1
-    range:
-      start: 0x20000000
-      end: 0x20030000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20000000
+      end: 0x20030000
+    cores:
+    - main
   flash_algorithms:
   - stm32wb5x_m4_1024
   - stm32wb55x_35x_m4_opt
@@ -444,22 +430,23 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM1
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20000000
+      end: 0x20010000
+    cores:
+    - main
   flash_algorithms:
   - stm32wb5x_m4_1024
   - stm32wb55x_35x_m4_opt
@@ -471,22 +458,23 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM1
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20000000
+      end: 0x20010000
+    cores:
+    - main
   flash_algorithms:
   - stm32wb5x_m4_1024
   - stm32wb55x_35x_m4_opt
@@ -498,22 +486,23 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM1
-    range:
-      start: 0x20000000
-      end: 0x20030000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20000000
+      end: 0x20030000
+    cores:
+    - main
   flash_algorithms:
   - stm32wb5x_m4_1024
   - stm32wb55x_35x_m4_opt
@@ -525,22 +514,23 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM1
-    range:
-      start: 0x20000000
-      end: 0x20030000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20000000
+      end: 0x20030000
+    cores:
+    - main
   flash_algorithms:
   - stm32wb5x_m4_1024
   - stm32wb55x_35x_m4_opt
@@ -552,22 +542,23 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM1
-    range:
-      start: 0x20000000
-      end: 0x20030000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20000000
+      end: 0x20030000
+    cores:
+    - main
   flash_algorithms:
   - stm32wb5x_m4_1024
   - stm32wb55x_35x_m4_opt
@@ -579,22 +570,23 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM1
-    range:
-      start: 0x20000000
-      end: 0x20030000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20000000
+      end: 0x20030000
+    cores:
+    - main
   flash_algorithms:
   - stm32wb5x_m4_1024
   - stm32wb55x_35x_m4_opt
@@ -606,22 +598,23 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM1
-    range:
-      start: 0x20000000
-      end: 0x20030000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x80a0000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20000000
+      end: 0x20030000
+    cores:
+    - main
   flash_algorithms:
   - stm32wb5x_m4_1024
   - stm32wb55x_35x_m4_opt
@@ -633,13 +626,6 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM1
-    range:
-      start: 0x20000000
-      end: 0x20030000
-    cores:
-    - main
   - !Nvm
     name: Main_Flash
     range:
@@ -649,6 +635,13 @@ variants:
     - main
     access:
       boot: true
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20030000
+    cores:
+    - main
   flash_algorithms:
   - stm32wb5x_m4_1024
 flash_algorithms:

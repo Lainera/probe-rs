@@ -14,23 +14,14 @@ variants:
       psel: 0x0
   memory_map:
   - !Ram
-    name: AXI_SRAM
+    name: ITCM
     range:
-      start: 0x24000000
-      end: 0x24072000
+      start: 0x0
+      end: 0x30000
     cores:
     - main
-  - !Ram
-    name: AHB_SRAM
-    range:
-      start: 0x30000000
-      end: 0x30008000
-    cores:
-    - main
-    access:
-      execute: false
   - !Nvm
-    name: Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -39,31 +30,55 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: ITCM_RAM
-    range:
-      start: 0x0
-      end: 0x10000
-    cores:
-    - main
-  - !Generic
-    name: DTCM_RAM
+  - !Ram
+    name: DTCM
     range:
       start: 0x20000000
-      end: 0x20010000
+      end: 0x20030000
     cores:
     - main
-    access:
-      execute: false
-  - !Generic
-    name: BKP_SRAM
+  - !Ram
+    name: SRAM1
     range:
-      start: 0x38800000
-      end: 0x38801000
+      start: 0x24000000
+      end: 0x24020000
     cores:
     - main
-    access:
-      execute: false
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x24020000
+      end: 0x24040000
+    cores:
+    - main
+  - !Ram
+    name: SRAM3
+    range:
+      start: 0x24040000
+      end: 0x24060000
+    cores:
+    - main
+  - !Ram
+    name: SRAM4
+    range:
+      start: 0x24060000
+      end: 0x24072000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM1
+    range:
+      start: 0x30000000
+      end: 0x30004000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM2
+    range:
+      start: 0x30004000
+      end: 0x30008000
+    cores:
+    - main
   flash_algorithms:
   - stm32h7rx_64k
   - mx66uw1g45g_stm32h7s78-dk
@@ -78,23 +93,14 @@ variants:
       psel: 0x0
   memory_map:
   - !Ram
-    name: AXI_SRAM
+    name: ITCM
     range:
-      start: 0x24000000
-      end: 0x24072000
+      start: 0x0
+      end: 0x30000
     cores:
     - main
-  - !Ram
-    name: AHB_SRAM
-    range:
-      start: 0x30000000
-      end: 0x30008000
-    cores:
-    - main
-    access:
-      execute: false
   - !Nvm
-    name: Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -103,31 +109,55 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: ITCM_RAM
-    range:
-      start: 0x0
-      end: 0x10000
-    cores:
-    - main
-  - !Generic
-    name: DTCM_RAM
+  - !Ram
+    name: DTCM
     range:
       start: 0x20000000
-      end: 0x20010000
+      end: 0x20030000
     cores:
     - main
-    access:
-      execute: false
-  - !Generic
-    name: BKP_SRAM
+  - !Ram
+    name: SRAM1
     range:
-      start: 0x38800000
-      end: 0x38801000
+      start: 0x24000000
+      end: 0x24020000
     cores:
     - main
-    access:
-      execute: false
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x24020000
+      end: 0x24040000
+    cores:
+    - main
+  - !Ram
+    name: SRAM3
+    range:
+      start: 0x24040000
+      end: 0x24060000
+    cores:
+    - main
+  - !Ram
+    name: SRAM4
+    range:
+      start: 0x24060000
+      end: 0x24072000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM1
+    range:
+      start: 0x30000000
+      end: 0x30004000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM2
+    range:
+      start: 0x30004000
+      end: 0x30008000
+    cores:
+    - main
   flash_algorithms:
   - stm32h7rx_64k
   - mx66uw1g45g_stm32h7s78-dk
@@ -142,23 +172,14 @@ variants:
       psel: 0x0
   memory_map:
   - !Ram
-    name: AXI_SRAM
+    name: ITCM
     range:
-      start: 0x24000000
-      end: 0x24072000
+      start: 0x0
+      end: 0x30000
     cores:
     - main
-  - !Ram
-    name: AHB_SRAM
-    range:
-      start: 0x30000000
-      end: 0x30008000
-    cores:
-    - main
-    access:
-      execute: false
   - !Nvm
-    name: Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -167,31 +188,55 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: ITCM_RAM
-    range:
-      start: 0x0
-      end: 0x10000
-    cores:
-    - main
-  - !Generic
-    name: DTCM_RAM
+  - !Ram
+    name: DTCM
     range:
       start: 0x20000000
-      end: 0x20010000
+      end: 0x20030000
     cores:
     - main
-    access:
-      execute: false
-  - !Generic
-    name: BKP_SRAM
+  - !Ram
+    name: SRAM1
     range:
-      start: 0x38800000
-      end: 0x38801000
+      start: 0x24000000
+      end: 0x24020000
     cores:
     - main
-    access:
-      execute: false
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x24020000
+      end: 0x24040000
+    cores:
+    - main
+  - !Ram
+    name: SRAM3
+    range:
+      start: 0x24040000
+      end: 0x24060000
+    cores:
+    - main
+  - !Ram
+    name: SRAM4
+    range:
+      start: 0x24060000
+      end: 0x24072000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM1
+    range:
+      start: 0x30000000
+      end: 0x30004000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM2
+    range:
+      start: 0x30004000
+      end: 0x30008000
+    cores:
+    - main
   flash_algorithms:
   - stm32h7rx_64k
   - mx66uw1g45g_stm32h7s78-dk
@@ -206,23 +251,14 @@ variants:
       psel: 0x0
   memory_map:
   - !Ram
-    name: AXI_SRAM
+    name: ITCM
     range:
-      start: 0x24000000
-      end: 0x24072000
+      start: 0x0
+      end: 0x30000
     cores:
     - main
-  - !Ram
-    name: AHB_SRAM
-    range:
-      start: 0x30000000
-      end: 0x30008000
-    cores:
-    - main
-    access:
-      execute: false
   - !Nvm
-    name: Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -231,31 +267,55 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: ITCM_RAM
-    range:
-      start: 0x0
-      end: 0x10000
-    cores:
-    - main
-  - !Generic
-    name: DTCM_RAM
+  - !Ram
+    name: DTCM
     range:
       start: 0x20000000
-      end: 0x20010000
+      end: 0x20030000
     cores:
     - main
-    access:
-      execute: false
-  - !Generic
-    name: BKP_SRAM
+  - !Ram
+    name: SRAM1
     range:
-      start: 0x38800000
-      end: 0x38801000
+      start: 0x24000000
+      end: 0x24020000
     cores:
     - main
-    access:
-      execute: false
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x24020000
+      end: 0x24040000
+    cores:
+    - main
+  - !Ram
+    name: SRAM3
+    range:
+      start: 0x24040000
+      end: 0x24060000
+    cores:
+    - main
+  - !Ram
+    name: SRAM4
+    range:
+      start: 0x24060000
+      end: 0x24072000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM1
+    range:
+      start: 0x30000000
+      end: 0x30004000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM2
+    range:
+      start: 0x30004000
+      end: 0x30008000
+    cores:
+    - main
   flash_algorithms:
   - stm32h7rx_64k
   - mx66uw1g45g_stm32h7s78-dk
@@ -270,23 +330,14 @@ variants:
       psel: 0x0
   memory_map:
   - !Ram
-    name: AXI_SRAM
+    name: ITCM
     range:
-      start: 0x24000000
-      end: 0x24072000
+      start: 0x0
+      end: 0x30000
     cores:
     - main
-  - !Ram
-    name: AHB_SRAM
-    range:
-      start: 0x30000000
-      end: 0x30008000
-    cores:
-    - main
-    access:
-      execute: false
   - !Nvm
-    name: Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -295,31 +346,55 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: ITCM_RAM
-    range:
-      start: 0x0
-      end: 0x10000
-    cores:
-    - main
-  - !Generic
-    name: DTCM_RAM
+  - !Ram
+    name: DTCM
     range:
       start: 0x20000000
-      end: 0x20010000
+      end: 0x20030000
     cores:
     - main
-    access:
-      execute: false
-  - !Generic
-    name: BKP_SRAM
+  - !Ram
+    name: SRAM1
     range:
-      start: 0x38800000
-      end: 0x38801000
+      start: 0x24000000
+      end: 0x24020000
     cores:
     - main
-    access:
-      execute: false
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x24020000
+      end: 0x24040000
+    cores:
+    - main
+  - !Ram
+    name: SRAM3
+    range:
+      start: 0x24040000
+      end: 0x24060000
+    cores:
+    - main
+  - !Ram
+    name: SRAM4
+    range:
+      start: 0x24060000
+      end: 0x24072000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM1
+    range:
+      start: 0x30000000
+      end: 0x30004000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM2
+    range:
+      start: 0x30004000
+      end: 0x30008000
+    cores:
+    - main
   flash_algorithms:
   - stm32h7rx_64k
   - mx66uw1g45g_stm32h7s78-dk
@@ -334,23 +409,14 @@ variants:
       psel: 0x0
   memory_map:
   - !Ram
-    name: AXI_SRAM
+    name: ITCM
     range:
-      start: 0x24000000
-      end: 0x24072000
+      start: 0x0
+      end: 0x30000
     cores:
     - main
-  - !Ram
-    name: AHB_SRAM
-    range:
-      start: 0x30000000
-      end: 0x30008000
-    cores:
-    - main
-    access:
-      execute: false
   - !Nvm
-    name: Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -359,31 +425,55 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: ITCM_RAM
-    range:
-      start: 0x0
-      end: 0x10000
-    cores:
-    - main
-  - !Generic
-    name: DTCM_RAM
+  - !Ram
+    name: DTCM
     range:
       start: 0x20000000
-      end: 0x20010000
+      end: 0x20030000
     cores:
     - main
-    access:
-      execute: false
-  - !Generic
-    name: BKP_SRAM
+  - !Ram
+    name: SRAM1
     range:
-      start: 0x38800000
-      end: 0x38801000
+      start: 0x24000000
+      end: 0x24020000
     cores:
     - main
-    access:
-      execute: false
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x24020000
+      end: 0x24040000
+    cores:
+    - main
+  - !Ram
+    name: SRAM3
+    range:
+      start: 0x24040000
+      end: 0x24060000
+    cores:
+    - main
+  - !Ram
+    name: SRAM4
+    range:
+      start: 0x24060000
+      end: 0x24072000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM1
+    range:
+      start: 0x30000000
+      end: 0x30004000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM2
+    range:
+      start: 0x30004000
+      end: 0x30008000
+    cores:
+    - main
   flash_algorithms:
   - stm32h7rx_64k
   - mx66uw1g45g_stm32h7s78-dk
@@ -398,23 +488,14 @@ variants:
       psel: 0x0
   memory_map:
   - !Ram
-    name: AXI_SRAM
+    name: ITCM
     range:
-      start: 0x24000000
-      end: 0x24072000
+      start: 0x0
+      end: 0x30000
     cores:
     - main
-  - !Ram
-    name: AHB_SRAM
-    range:
-      start: 0x30000000
-      end: 0x30008000
-    cores:
-    - main
-    access:
-      execute: false
   - !Nvm
-    name: Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -423,31 +504,55 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: ITCM_RAM
-    range:
-      start: 0x0
-      end: 0x10000
-    cores:
-    - main
-  - !Generic
-    name: DTCM_RAM
+  - !Ram
+    name: DTCM
     range:
       start: 0x20000000
-      end: 0x20010000
+      end: 0x20030000
     cores:
     - main
-    access:
-      execute: false
-  - !Generic
-    name: BKP_SRAM
+  - !Ram
+    name: SRAM1
     range:
-      start: 0x38800000
-      end: 0x38801000
+      start: 0x24000000
+      end: 0x24020000
     cores:
     - main
-    access:
-      execute: false
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x24020000
+      end: 0x24040000
+    cores:
+    - main
+  - !Ram
+    name: SRAM3
+    range:
+      start: 0x24040000
+      end: 0x24060000
+    cores:
+    - main
+  - !Ram
+    name: SRAM4
+    range:
+      start: 0x24060000
+      end: 0x24072000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM1
+    range:
+      start: 0x30000000
+      end: 0x30004000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM2
+    range:
+      start: 0x30004000
+      end: 0x30008000
+    cores:
+    - main
   flash_algorithms:
   - stm32h7rx_64k
   - mx66uw1g45g_stm32h7s78-dk
@@ -462,23 +567,14 @@ variants:
       psel: 0x0
   memory_map:
   - !Ram
-    name: AXI_SRAM
+    name: ITCM
     range:
-      start: 0x24000000
-      end: 0x24072000
+      start: 0x0
+      end: 0x30000
     cores:
     - main
-  - !Ram
-    name: AHB_SRAM
-    range:
-      start: 0x30000000
-      end: 0x30008000
-    cores:
-    - main
-    access:
-      execute: false
   - !Nvm
-    name: Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -487,31 +583,55 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: ITCM_RAM
-    range:
-      start: 0x0
-      end: 0x10000
-    cores:
-    - main
-  - !Generic
-    name: DTCM_RAM
+  - !Ram
+    name: DTCM
     range:
       start: 0x20000000
-      end: 0x20010000
+      end: 0x20030000
     cores:
     - main
-    access:
-      execute: false
-  - !Generic
-    name: BKP_SRAM
+  - !Ram
+    name: SRAM1
     range:
-      start: 0x38800000
-      end: 0x38801000
+      start: 0x24000000
+      end: 0x24020000
     cores:
     - main
-    access:
-      execute: false
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x24020000
+      end: 0x24040000
+    cores:
+    - main
+  - !Ram
+    name: SRAM3
+    range:
+      start: 0x24040000
+      end: 0x24060000
+    cores:
+    - main
+  - !Ram
+    name: SRAM4
+    range:
+      start: 0x24060000
+      end: 0x24072000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM1
+    range:
+      start: 0x30000000
+      end: 0x30004000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM2
+    range:
+      start: 0x30004000
+      end: 0x30008000
+    cores:
+    - main
   flash_algorithms:
   - stm32h7rx_64k
   - mx66uw1g45g_stm32h7s78-dk
@@ -526,23 +646,14 @@ variants:
       psel: 0x0
   memory_map:
   - !Ram
-    name: AXI_SRAM
+    name: ITCM
     range:
-      start: 0x24000000
-      end: 0x24072000
+      start: 0x0
+      end: 0x30000
     cores:
     - main
-  - !Ram
-    name: AHB_SRAM
-    range:
-      start: 0x30000000
-      end: 0x30008000
-    cores:
-    - main
-    access:
-      execute: false
   - !Nvm
-    name: Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -551,31 +662,55 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: ITCM_RAM
-    range:
-      start: 0x0
-      end: 0x10000
-    cores:
-    - main
-  - !Generic
-    name: DTCM_RAM
+  - !Ram
+    name: DTCM
     range:
       start: 0x20000000
-      end: 0x20010000
+      end: 0x20030000
     cores:
     - main
-    access:
-      execute: false
-  - !Generic
-    name: BKP_SRAM
+  - !Ram
+    name: SRAM1
     range:
-      start: 0x38800000
-      end: 0x38801000
+      start: 0x24000000
+      end: 0x24020000
     cores:
     - main
-    access:
-      execute: false
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x24020000
+      end: 0x24040000
+    cores:
+    - main
+  - !Ram
+    name: SRAM3
+    range:
+      start: 0x24040000
+      end: 0x24060000
+    cores:
+    - main
+  - !Ram
+    name: SRAM4
+    range:
+      start: 0x24060000
+      end: 0x24072000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM1
+    range:
+      start: 0x30000000
+      end: 0x30004000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM2
+    range:
+      start: 0x30004000
+      end: 0x30008000
+    cores:
+    - main
   flash_algorithms:
   - stm32h7rx_64k
   - mx66uw1g45g_stm32h7s78-dk
@@ -590,23 +725,14 @@ variants:
       psel: 0x0
   memory_map:
   - !Ram
-    name: AXI_SRAM
+    name: ITCM
     range:
-      start: 0x24000000
-      end: 0x24072000
+      start: 0x0
+      end: 0x30000
     cores:
     - main
-  - !Ram
-    name: AHB_SRAM
-    range:
-      start: 0x30000000
-      end: 0x30008000
-    cores:
-    - main
-    access:
-      execute: false
   - !Nvm
-    name: Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -615,31 +741,55 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: ITCM_RAM
-    range:
-      start: 0x0
-      end: 0x10000
-    cores:
-    - main
-  - !Generic
-    name: DTCM_RAM
+  - !Ram
+    name: DTCM
     range:
       start: 0x20000000
-      end: 0x20010000
+      end: 0x20030000
     cores:
     - main
-    access:
-      execute: false
-  - !Generic
-    name: BKP_SRAM
+  - !Ram
+    name: SRAM1
     range:
-      start: 0x38800000
-      end: 0x38801000
+      start: 0x24000000
+      end: 0x24020000
     cores:
     - main
-    access:
-      execute: false
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x24020000
+      end: 0x24040000
+    cores:
+    - main
+  - !Ram
+    name: SRAM3
+    range:
+      start: 0x24040000
+      end: 0x24060000
+    cores:
+    - main
+  - !Ram
+    name: SRAM4
+    range:
+      start: 0x24060000
+      end: 0x24072000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM1
+    range:
+      start: 0x30000000
+      end: 0x30004000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM2
+    range:
+      start: 0x30004000
+      end: 0x30008000
+    cores:
+    - main
   flash_algorithms:
   - stm32h7rx_64k
   - mx66uw1g45g_stm32h7s78-dk
@@ -654,23 +804,14 @@ variants:
       psel: 0x0
   memory_map:
   - !Ram
-    name: AXI_SRAM
+    name: ITCM
     range:
-      start: 0x24000000
-      end: 0x24072000
+      start: 0x0
+      end: 0x30000
     cores:
     - main
-  - !Ram
-    name: AHB_SRAM
-    range:
-      start: 0x30000000
-      end: 0x30008000
-    cores:
-    - main
-    access:
-      execute: false
   - !Nvm
-    name: Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -679,31 +820,55 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: ITCM_RAM
-    range:
-      start: 0x0
-      end: 0x10000
-    cores:
-    - main
-  - !Generic
-    name: DTCM_RAM
+  - !Ram
+    name: DTCM
     range:
       start: 0x20000000
-      end: 0x20010000
+      end: 0x20030000
     cores:
     - main
-    access:
-      execute: false
-  - !Generic
-    name: BKP_SRAM
+  - !Ram
+    name: SRAM1
     range:
-      start: 0x38800000
-      end: 0x38801000
+      start: 0x24000000
+      end: 0x24020000
     cores:
     - main
-    access:
-      execute: false
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x24020000
+      end: 0x24040000
+    cores:
+    - main
+  - !Ram
+    name: SRAM3
+    range:
+      start: 0x24040000
+      end: 0x24060000
+    cores:
+    - main
+  - !Ram
+    name: SRAM4
+    range:
+      start: 0x24060000
+      end: 0x24072000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM1
+    range:
+      start: 0x30000000
+      end: 0x30004000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM2
+    range:
+      start: 0x30004000
+      end: 0x30008000
+    cores:
+    - main
   flash_algorithms:
   - stm32h7rx_64k
   - mx66uw1g45g_stm32h7s78-dk
@@ -718,28 +883,14 @@ variants:
       psel: 0x0
   memory_map:
   - !Ram
-    name: DTCM_RAM
+    name: ITCM
     range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: AXI_SRAM
-    range:
-      start: 0x24000000
-      end: 0x24072000
-    cores:
-    - main
-  - !Ram
-    name: AHB_SRAM
-    range:
-      start: 0x30000000
-      end: 0x30008000
+      start: 0x0
+      end: 0x30000
     cores:
     - main
   - !Nvm
-    name: Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -748,18 +899,53 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: ITCM_RAM
+  - !Ram
+    name: DTCM
     range:
-      start: 0x0
-      end: 0x10000
+      start: 0x20000000
+      end: 0x20030000
     cores:
     - main
-  - !Generic
-    name: BKP_SRAM
+  - !Ram
+    name: SRAM1
     range:
-      start: 0x38800000
-      end: 0x38801000
+      start: 0x24000000
+      end: 0x24020000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x24020000
+      end: 0x24040000
+    cores:
+    - main
+  - !Ram
+    name: SRAM3
+    range:
+      start: 0x24040000
+      end: 0x24060000
+    cores:
+    - main
+  - !Ram
+    name: SRAM4
+    range:
+      start: 0x24060000
+      end: 0x24072000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM1
+    range:
+      start: 0x30000000
+      end: 0x30004000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM2
+    range:
+      start: 0x30004000
+      end: 0x30008000
     cores:
     - main
   flash_algorithms:
@@ -776,28 +962,14 @@ variants:
       psel: 0x0
   memory_map:
   - !Ram
-    name: DTCM_RAM
+    name: ITCM
     range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: AXI_SRAM
-    range:
-      start: 0x24000000
-      end: 0x24072000
-    cores:
-    - main
-  - !Ram
-    name: AHB_SRAM
-    range:
-      start: 0x30000000
-      end: 0x30008000
+      start: 0x0
+      end: 0x30000
     cores:
     - main
   - !Nvm
-    name: Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -806,18 +978,53 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: ITCM_RAM
+  - !Ram
+    name: DTCM
     range:
-      start: 0x0
-      end: 0x10000
+      start: 0x20000000
+      end: 0x20030000
     cores:
     - main
-  - !Generic
-    name: BKP_SRAM
+  - !Ram
+    name: SRAM1
     range:
-      start: 0x38800000
-      end: 0x38801000
+      start: 0x24000000
+      end: 0x24020000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x24020000
+      end: 0x24040000
+    cores:
+    - main
+  - !Ram
+    name: SRAM3
+    range:
+      start: 0x24040000
+      end: 0x24060000
+    cores:
+    - main
+  - !Ram
+    name: SRAM4
+    range:
+      start: 0x24060000
+      end: 0x24072000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM1
+    range:
+      start: 0x30000000
+      end: 0x30004000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM2
+    range:
+      start: 0x30004000
+      end: 0x30008000
     cores:
     - main
   flash_algorithms:
@@ -834,28 +1041,14 @@ variants:
       psel: 0x0
   memory_map:
   - !Ram
-    name: DTCM_RAM
+    name: ITCM
     range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: AXI_SRAM
-    range:
-      start: 0x24000000
-      end: 0x24072000
-    cores:
-    - main
-  - !Ram
-    name: AHB_SRAM
-    range:
-      start: 0x30000000
-      end: 0x30008000
+      start: 0x0
+      end: 0x30000
     cores:
     - main
   - !Nvm
-    name: Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -864,18 +1057,53 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: ITCM_RAM
+  - !Ram
+    name: DTCM
     range:
-      start: 0x0
-      end: 0x10000
+      start: 0x20000000
+      end: 0x20030000
     cores:
     - main
-  - !Generic
-    name: BKP_SRAM
+  - !Ram
+    name: SRAM1
     range:
-      start: 0x38800000
-      end: 0x38801000
+      start: 0x24000000
+      end: 0x24020000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x24020000
+      end: 0x24040000
+    cores:
+    - main
+  - !Ram
+    name: SRAM3
+    range:
+      start: 0x24040000
+      end: 0x24060000
+    cores:
+    - main
+  - !Ram
+    name: SRAM4
+    range:
+      start: 0x24060000
+      end: 0x24072000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM1
+    range:
+      start: 0x30000000
+      end: 0x30004000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM2
+    range:
+      start: 0x30004000
+      end: 0x30008000
     cores:
     - main
   flash_algorithms:
@@ -892,28 +1120,14 @@ variants:
       psel: 0x0
   memory_map:
   - !Ram
-    name: DTCM_RAM
+    name: ITCM
     range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: AXI_SRAM
-    range:
-      start: 0x24000000
-      end: 0x24072000
-    cores:
-    - main
-  - !Ram
-    name: AHB_SRAM
-    range:
-      start: 0x30000000
-      end: 0x30008000
+      start: 0x0
+      end: 0x30000
     cores:
     - main
   - !Nvm
-    name: Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -922,18 +1136,53 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: ITCM_RAM
+  - !Ram
+    name: DTCM
     range:
-      start: 0x0
-      end: 0x10000
+      start: 0x20000000
+      end: 0x20030000
     cores:
     - main
-  - !Generic
-    name: BKP_SRAM
+  - !Ram
+    name: SRAM1
     range:
-      start: 0x38800000
-      end: 0x38801000
+      start: 0x24000000
+      end: 0x24020000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x24020000
+      end: 0x24040000
+    cores:
+    - main
+  - !Ram
+    name: SRAM3
+    range:
+      start: 0x24040000
+      end: 0x24060000
+    cores:
+    - main
+  - !Ram
+    name: SRAM4
+    range:
+      start: 0x24060000
+      end: 0x24072000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM1
+    range:
+      start: 0x30000000
+      end: 0x30004000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM2
+    range:
+      start: 0x30004000
+      end: 0x30008000
     cores:
     - main
   flash_algorithms:
@@ -950,28 +1199,14 @@ variants:
       psel: 0x0
   memory_map:
   - !Ram
-    name: DTCM_RAM
+    name: ITCM
     range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: AXI_SRAM
-    range:
-      start: 0x24000000
-      end: 0x24072000
-    cores:
-    - main
-  - !Ram
-    name: AHB_SRAM
-    range:
-      start: 0x30000000
-      end: 0x30008000
+      start: 0x0
+      end: 0x30000
     cores:
     - main
   - !Nvm
-    name: Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -980,18 +1215,53 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: ITCM_RAM
+  - !Ram
+    name: DTCM
     range:
-      start: 0x0
-      end: 0x10000
+      start: 0x20000000
+      end: 0x20030000
     cores:
     - main
-  - !Generic
-    name: BKP_SRAM
+  - !Ram
+    name: SRAM1
     range:
-      start: 0x38800000
-      end: 0x38801000
+      start: 0x24000000
+      end: 0x24020000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x24020000
+      end: 0x24040000
+    cores:
+    - main
+  - !Ram
+    name: SRAM3
+    range:
+      start: 0x24040000
+      end: 0x24060000
+    cores:
+    - main
+  - !Ram
+    name: SRAM4
+    range:
+      start: 0x24060000
+      end: 0x24072000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM1
+    range:
+      start: 0x30000000
+      end: 0x30004000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM2
+    range:
+      start: 0x30004000
+      end: 0x30008000
     cores:
     - main
   flash_algorithms:
@@ -1008,28 +1278,14 @@ variants:
       psel: 0x0
   memory_map:
   - !Ram
-    name: DTCM_RAM
+    name: ITCM
     range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: AXI_SRAM
-    range:
-      start: 0x24000000
-      end: 0x24072000
-    cores:
-    - main
-  - !Ram
-    name: AHB_SRAM
-    range:
-      start: 0x30000000
-      end: 0x30008000
+      start: 0x0
+      end: 0x30000
     cores:
     - main
   - !Nvm
-    name: Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -1038,18 +1294,53 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: ITCM_RAM
+  - !Ram
+    name: DTCM
     range:
-      start: 0x0
-      end: 0x10000
+      start: 0x20000000
+      end: 0x20030000
     cores:
     - main
-  - !Generic
-    name: BKP_SRAM
+  - !Ram
+    name: SRAM1
     range:
-      start: 0x38800000
-      end: 0x38801000
+      start: 0x24000000
+      end: 0x24020000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x24020000
+      end: 0x24040000
+    cores:
+    - main
+  - !Ram
+    name: SRAM3
+    range:
+      start: 0x24040000
+      end: 0x24060000
+    cores:
+    - main
+  - !Ram
+    name: SRAM4
+    range:
+      start: 0x24060000
+      end: 0x24072000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM1
+    range:
+      start: 0x30000000
+      end: 0x30004000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM2
+    range:
+      start: 0x30004000
+      end: 0x30008000
     cores:
     - main
   flash_algorithms:
@@ -1066,28 +1357,14 @@ variants:
       psel: 0x0
   memory_map:
   - !Ram
-    name: DTCM_RAM
+    name: ITCM
     range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: AXI_SRAM
-    range:
-      start: 0x24000000
-      end: 0x24072000
-    cores:
-    - main
-  - !Ram
-    name: AHB_SRAM
-    range:
-      start: 0x30000000
-      end: 0x30008000
+      start: 0x0
+      end: 0x30000
     cores:
     - main
   - !Nvm
-    name: Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -1096,18 +1373,53 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: ITCM_RAM
+  - !Ram
+    name: DTCM
     range:
-      start: 0x0
-      end: 0x10000
+      start: 0x20000000
+      end: 0x20030000
     cores:
     - main
-  - !Generic
-    name: BKP_SRAM
+  - !Ram
+    name: SRAM1
     range:
-      start: 0x38800000
-      end: 0x38801000
+      start: 0x24000000
+      end: 0x24020000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x24020000
+      end: 0x24040000
+    cores:
+    - main
+  - !Ram
+    name: SRAM3
+    range:
+      start: 0x24040000
+      end: 0x24060000
+    cores:
+    - main
+  - !Ram
+    name: SRAM4
+    range:
+      start: 0x24060000
+      end: 0x24072000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM1
+    range:
+      start: 0x30000000
+      end: 0x30004000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM2
+    range:
+      start: 0x30004000
+      end: 0x30008000
     cores:
     - main
   flash_algorithms:
@@ -1124,28 +1436,14 @@ variants:
       psel: 0x0
   memory_map:
   - !Ram
-    name: DTCM_RAM
+    name: ITCM
     range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: AXI_SRAM
-    range:
-      start: 0x24000000
-      end: 0x24072000
-    cores:
-    - main
-  - !Ram
-    name: AHB_SRAM
-    range:
-      start: 0x30000000
-      end: 0x30008000
+      start: 0x0
+      end: 0x30000
     cores:
     - main
   - !Nvm
-    name: Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -1154,18 +1452,53 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: ITCM_RAM
+  - !Ram
+    name: DTCM
     range:
-      start: 0x0
-      end: 0x10000
+      start: 0x20000000
+      end: 0x20030000
     cores:
     - main
-  - !Generic
-    name: BKP_SRAM
+  - !Ram
+    name: SRAM1
     range:
-      start: 0x38800000
-      end: 0x38801000
+      start: 0x24000000
+      end: 0x24020000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x24020000
+      end: 0x24040000
+    cores:
+    - main
+  - !Ram
+    name: SRAM3
+    range:
+      start: 0x24040000
+      end: 0x24060000
+    cores:
+    - main
+  - !Ram
+    name: SRAM4
+    range:
+      start: 0x24060000
+      end: 0x24072000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM1
+    range:
+      start: 0x30000000
+      end: 0x30004000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM2
+    range:
+      start: 0x30004000
+      end: 0x30008000
     cores:
     - main
   flash_algorithms:
@@ -1182,28 +1515,14 @@ variants:
       psel: 0x0
   memory_map:
   - !Ram
-    name: DTCM_RAM
+    name: ITCM
     range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: AXI_SRAM
-    range:
-      start: 0x24000000
-      end: 0x24072000
-    cores:
-    - main
-  - !Ram
-    name: AHB_SRAM
-    range:
-      start: 0x30000000
-      end: 0x30008000
+      start: 0x0
+      end: 0x30000
     cores:
     - main
   - !Nvm
-    name: Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -1212,18 +1531,53 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: ITCM_RAM
+  - !Ram
+    name: DTCM
     range:
-      start: 0x0
-      end: 0x10000
+      start: 0x20000000
+      end: 0x20030000
     cores:
     - main
-  - !Generic
-    name: BKP_SRAM
+  - !Ram
+    name: SRAM1
     range:
-      start: 0x38800000
-      end: 0x38801000
+      start: 0x24000000
+      end: 0x24020000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x24020000
+      end: 0x24040000
+    cores:
+    - main
+  - !Ram
+    name: SRAM3
+    range:
+      start: 0x24040000
+      end: 0x24060000
+    cores:
+    - main
+  - !Ram
+    name: SRAM4
+    range:
+      start: 0x24060000
+      end: 0x24072000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM1
+    range:
+      start: 0x30000000
+      end: 0x30004000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM2
+    range:
+      start: 0x30004000
+      end: 0x30008000
     cores:
     - main
   flash_algorithms:
@@ -1240,28 +1594,14 @@ variants:
       psel: 0x0
   memory_map:
   - !Ram
-    name: DTCM_RAM
+    name: ITCM
     range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: AXI_SRAM
-    range:
-      start: 0x24000000
-      end: 0x24072000
-    cores:
-    - main
-  - !Ram
-    name: AHB_SRAM
-    range:
-      start: 0x30000000
-      end: 0x30008000
+      start: 0x0
+      end: 0x30000
     cores:
     - main
   - !Nvm
-    name: Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -1270,18 +1610,53 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: ITCM_RAM
+  - !Ram
+    name: DTCM
     range:
-      start: 0x0
-      end: 0x10000
+      start: 0x20000000
+      end: 0x20030000
     cores:
     - main
-  - !Generic
-    name: BKP_SRAM
+  - !Ram
+    name: SRAM1
     range:
-      start: 0x38800000
-      end: 0x38801000
+      start: 0x24000000
+      end: 0x24020000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x24020000
+      end: 0x24040000
+    cores:
+    - main
+  - !Ram
+    name: SRAM3
+    range:
+      start: 0x24040000
+      end: 0x24060000
+    cores:
+    - main
+  - !Ram
+    name: SRAM4
+    range:
+      start: 0x24060000
+      end: 0x24072000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM1
+    range:
+      start: 0x30000000
+      end: 0x30004000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM2
+    range:
+      start: 0x30004000
+      end: 0x30008000
     cores:
     - main
   flash_algorithms:
@@ -1298,28 +1673,14 @@ variants:
       psel: 0x0
   memory_map:
   - !Ram
-    name: DTCM_RAM
+    name: ITCM
     range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: AXI_SRAM
-    range:
-      start: 0x24000000
-      end: 0x24072000
-    cores:
-    - main
-  - !Ram
-    name: AHB_SRAM
-    range:
-      start: 0x30000000
-      end: 0x30008000
+      start: 0x0
+      end: 0x30000
     cores:
     - main
   - !Nvm
-    name: Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -1328,18 +1689,53 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: ITCM_RAM
+  - !Ram
+    name: DTCM
     range:
-      start: 0x0
-      end: 0x10000
+      start: 0x20000000
+      end: 0x20030000
     cores:
     - main
-  - !Generic
-    name: BKP_SRAM
+  - !Ram
+    name: SRAM1
     range:
-      start: 0x38800000
-      end: 0x38801000
+      start: 0x24000000
+      end: 0x24020000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x24020000
+      end: 0x24040000
+    cores:
+    - main
+  - !Ram
+    name: SRAM3
+    range:
+      start: 0x24040000
+      end: 0x24060000
+    cores:
+    - main
+  - !Ram
+    name: SRAM4
+    range:
+      start: 0x24060000
+      end: 0x24072000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM1
+    range:
+      start: 0x30000000
+      end: 0x30004000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM2
+    range:
+      start: 0x30004000
+      end: 0x30008000
     cores:
     - main
   flash_algorithms:
@@ -1356,28 +1752,14 @@ variants:
       psel: 0x0
   memory_map:
   - !Ram
-    name: DTCM_RAM
+    name: ITCM
     range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: AXI_SRAM
-    range:
-      start: 0x24000000
-      end: 0x24072000
-    cores:
-    - main
-  - !Ram
-    name: AHB_SRAM
-    range:
-      start: 0x30000000
-      end: 0x30008000
+      start: 0x0
+      end: 0x30000
     cores:
     - main
   - !Nvm
-    name: Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -1386,18 +1768,53 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: ITCM_RAM
+  - !Ram
+    name: DTCM
     range:
-      start: 0x0
-      end: 0x10000
+      start: 0x20000000
+      end: 0x20030000
     cores:
     - main
-  - !Generic
-    name: BKP_SRAM
+  - !Ram
+    name: SRAM1
     range:
-      start: 0x38800000
-      end: 0x38801000
+      start: 0x24000000
+      end: 0x24020000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x24020000
+      end: 0x24040000
+    cores:
+    - main
+  - !Ram
+    name: SRAM3
+    range:
+      start: 0x24040000
+      end: 0x24060000
+    cores:
+    - main
+  - !Ram
+    name: SRAM4
+    range:
+      start: 0x24060000
+      end: 0x24072000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM1
+    range:
+      start: 0x30000000
+      end: 0x30004000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM2
+    range:
+      start: 0x30004000
+      end: 0x30008000
     cores:
     - main
   flash_algorithms:
@@ -1414,28 +1831,14 @@ variants:
       psel: 0x0
   memory_map:
   - !Ram
-    name: DTCM_RAM
+    name: ITCM
     range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: AXI_SRAM
-    range:
-      start: 0x24000000
-      end: 0x24072000
-    cores:
-    - main
-  - !Ram
-    name: AHB_SRAM
-    range:
-      start: 0x30000000
-      end: 0x30008000
+      start: 0x0
+      end: 0x30000
     cores:
     - main
   - !Nvm
-    name: Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -1444,18 +1847,53 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: ITCM_RAM
+  - !Ram
+    name: DTCM
     range:
-      start: 0x0
-      end: 0x10000
+      start: 0x20000000
+      end: 0x20030000
     cores:
     - main
-  - !Generic
-    name: BKP_SRAM
+  - !Ram
+    name: SRAM1
     range:
-      start: 0x38800000
-      end: 0x38801000
+      start: 0x24000000
+      end: 0x24020000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x24020000
+      end: 0x24040000
+    cores:
+    - main
+  - !Ram
+    name: SRAM3
+    range:
+      start: 0x24040000
+      end: 0x24060000
+    cores:
+    - main
+  - !Ram
+    name: SRAM4
+    range:
+      start: 0x24060000
+      end: 0x24072000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM1
+    range:
+      start: 0x30000000
+      end: 0x30004000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM2
+    range:
+      start: 0x30004000
+      end: 0x30008000
     cores:
     - main
   flash_algorithms:
@@ -1472,28 +1910,14 @@ variants:
       psel: 0x0
   memory_map:
   - !Ram
-    name: DTCM_RAM
+    name: ITCM
     range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: AXI_SRAM
-    range:
-      start: 0x24000000
-      end: 0x24072000
-    cores:
-    - main
-  - !Ram
-    name: AHB_SRAM
-    range:
-      start: 0x30000000
-      end: 0x30008000
+      start: 0x0
+      end: 0x30000
     cores:
     - main
   - !Nvm
-    name: Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -1502,18 +1926,53 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: ITCM_RAM
+  - !Ram
+    name: DTCM
     range:
-      start: 0x0
-      end: 0x10000
+      start: 0x20000000
+      end: 0x20030000
     cores:
     - main
-  - !Generic
-    name: BKP_SRAM
+  - !Ram
+    name: SRAM1
     range:
-      start: 0x38800000
-      end: 0x38801000
+      start: 0x24000000
+      end: 0x24020000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x24020000
+      end: 0x24040000
+    cores:
+    - main
+  - !Ram
+    name: SRAM3
+    range:
+      start: 0x24040000
+      end: 0x24060000
+    cores:
+    - main
+  - !Ram
+    name: SRAM4
+    range:
+      start: 0x24060000
+      end: 0x24072000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM1
+    range:
+      start: 0x30000000
+      end: 0x30004000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM2
+    range:
+      start: 0x30004000
+      end: 0x30008000
     cores:
     - main
   flash_algorithms:
@@ -1530,28 +1989,14 @@ variants:
       psel: 0x0
   memory_map:
   - !Ram
-    name: DTCM_RAM
+    name: ITCM
     range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: AXI_SRAM
-    range:
-      start: 0x24000000
-      end: 0x24072000
-    cores:
-    - main
-  - !Ram
-    name: AHB_SRAM
-    range:
-      start: 0x30000000
-      end: 0x30008000
+      start: 0x0
+      end: 0x30000
     cores:
     - main
   - !Nvm
-    name: Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -1560,18 +2005,53 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: ITCM_RAM
+  - !Ram
+    name: DTCM
     range:
-      start: 0x0
-      end: 0x10000
+      start: 0x20000000
+      end: 0x20030000
     cores:
     - main
-  - !Generic
-    name: BKP_SRAM
+  - !Ram
+    name: SRAM1
     range:
-      start: 0x38800000
-      end: 0x38801000
+      start: 0x24000000
+      end: 0x24020000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x24020000
+      end: 0x24040000
+    cores:
+    - main
+  - !Ram
+    name: SRAM3
+    range:
+      start: 0x24040000
+      end: 0x24060000
+    cores:
+    - main
+  - !Ram
+    name: SRAM4
+    range:
+      start: 0x24060000
+      end: 0x24072000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM1
+    range:
+      start: 0x30000000
+      end: 0x30004000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM2
+    range:
+      start: 0x30004000
+      end: 0x30008000
     cores:
     - main
   flash_algorithms:
@@ -1588,28 +2068,14 @@ variants:
       psel: 0x0
   memory_map:
   - !Ram
-    name: DTCM_RAM
+    name: ITCM
     range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: AXI_SRAM
-    range:
-      start: 0x24000000
-      end: 0x24072000
-    cores:
-    - main
-  - !Ram
-    name: AHB_SRAM
-    range:
-      start: 0x30000000
-      end: 0x30008000
+      start: 0x0
+      end: 0x30000
     cores:
     - main
   - !Nvm
-    name: Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -1618,18 +2084,53 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: ITCM_RAM
+  - !Ram
+    name: DTCM
     range:
-      start: 0x0
-      end: 0x10000
+      start: 0x20000000
+      end: 0x20030000
     cores:
     - main
-  - !Generic
-    name: BKP_SRAM
+  - !Ram
+    name: SRAM1
     range:
-      start: 0x38800000
-      end: 0x38801000
+      start: 0x24000000
+      end: 0x24020000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x24020000
+      end: 0x24040000
+    cores:
+    - main
+  - !Ram
+    name: SRAM3
+    range:
+      start: 0x24040000
+      end: 0x24060000
+    cores:
+    - main
+  - !Ram
+    name: SRAM4
+    range:
+      start: 0x24060000
+      end: 0x24072000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM1
+    range:
+      start: 0x30000000
+      end: 0x30004000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM2
+    range:
+      start: 0x30004000
+      end: 0x30008000
     cores:
     - main
   flash_algorithms:
@@ -1646,28 +2147,14 @@ variants:
       psel: 0x0
   memory_map:
   - !Ram
-    name: DTCM_RAM
+    name: ITCM
     range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: AXI_SRAM
-    range:
-      start: 0x24000000
-      end: 0x24072000
-    cores:
-    - main
-  - !Ram
-    name: AHB_SRAM
-    range:
-      start: 0x30000000
-      end: 0x30008000
+      start: 0x0
+      end: 0x30000
     cores:
     - main
   - !Nvm
-    name: Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -1676,18 +2163,53 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: ITCM_RAM
+  - !Ram
+    name: DTCM
     range:
-      start: 0x0
-      end: 0x10000
+      start: 0x20000000
+      end: 0x20030000
     cores:
     - main
-  - !Generic
-    name: BKP_SRAM
+  - !Ram
+    name: SRAM1
     range:
-      start: 0x38800000
-      end: 0x38801000
+      start: 0x24000000
+      end: 0x24020000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x24020000
+      end: 0x24040000
+    cores:
+    - main
+  - !Ram
+    name: SRAM3
+    range:
+      start: 0x24040000
+      end: 0x24060000
+    cores:
+    - main
+  - !Ram
+    name: SRAM4
+    range:
+      start: 0x24060000
+      end: 0x24072000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM1
+    range:
+      start: 0x30000000
+      end: 0x30004000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM2
+    range:
+      start: 0x30004000
+      end: 0x30008000
     cores:
     - main
   flash_algorithms:
@@ -1704,28 +2226,14 @@ variants:
       psel: 0x0
   memory_map:
   - !Ram
-    name: DTCM_RAM
+    name: ITCM
     range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: AXI_SRAM
-    range:
-      start: 0x24000000
-      end: 0x24072000
-    cores:
-    - main
-  - !Ram
-    name: AHB_SRAM
-    range:
-      start: 0x30000000
-      end: 0x30008000
+      start: 0x0
+      end: 0x30000
     cores:
     - main
   - !Nvm
-    name: Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -1734,18 +2242,53 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: ITCM_RAM
+  - !Ram
+    name: DTCM
     range:
-      start: 0x0
-      end: 0x10000
+      start: 0x20000000
+      end: 0x20030000
     cores:
     - main
-  - !Generic
-    name: BKP_SRAM
+  - !Ram
+    name: SRAM1
     range:
-      start: 0x38800000
-      end: 0x38801000
+      start: 0x24000000
+      end: 0x24020000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x24020000
+      end: 0x24040000
+    cores:
+    - main
+  - !Ram
+    name: SRAM3
+    range:
+      start: 0x24040000
+      end: 0x24060000
+    cores:
+    - main
+  - !Ram
+    name: SRAM4
+    range:
+      start: 0x24060000
+      end: 0x24072000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM1
+    range:
+      start: 0x30000000
+      end: 0x30004000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM2
+    range:
+      start: 0x30004000
+      end: 0x30008000
     cores:
     - main
   flash_algorithms:
@@ -1762,28 +2305,14 @@ variants:
       psel: 0x0
   memory_map:
   - !Ram
-    name: DTCM_RAM
+    name: ITCM
     range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: AXI_SRAM
-    range:
-      start: 0x24000000
-      end: 0x24072000
-    cores:
-    - main
-  - !Ram
-    name: AHB_SRAM
-    range:
-      start: 0x30000000
-      end: 0x30008000
+      start: 0x0
+      end: 0x30000
     cores:
     - main
   - !Nvm
-    name: Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -1792,18 +2321,53 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: ITCM_RAM
+  - !Ram
+    name: DTCM
     range:
-      start: 0x0
-      end: 0x10000
+      start: 0x20000000
+      end: 0x20030000
     cores:
     - main
-  - !Generic
-    name: BKP_SRAM
+  - !Ram
+    name: SRAM1
     range:
-      start: 0x38800000
-      end: 0x38801000
+      start: 0x24000000
+      end: 0x24020000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x24020000
+      end: 0x24040000
+    cores:
+    - main
+  - !Ram
+    name: SRAM3
+    range:
+      start: 0x24040000
+      end: 0x24060000
+    cores:
+    - main
+  - !Ram
+    name: SRAM4
+    range:
+      start: 0x24060000
+      end: 0x24072000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM1
+    range:
+      start: 0x30000000
+      end: 0x30004000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM2
+    range:
+      start: 0x30004000
+      end: 0x30008000
     cores:
     - main
   flash_algorithms:
@@ -1820,28 +2384,14 @@ variants:
       psel: 0x0
   memory_map:
   - !Ram
-    name: DTCM_RAM
+    name: ITCM
     range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: AXI_SRAM
-    range:
-      start: 0x24000000
-      end: 0x24072000
-    cores:
-    - main
-  - !Ram
-    name: AHB_SRAM
-    range:
-      start: 0x30000000
-      end: 0x30008000
+      start: 0x0
+      end: 0x30000
     cores:
     - main
   - !Nvm
-    name: Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -1850,18 +2400,53 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: ITCM_RAM
+  - !Ram
+    name: DTCM
     range:
-      start: 0x0
-      end: 0x10000
+      start: 0x20000000
+      end: 0x20030000
     cores:
     - main
-  - !Generic
-    name: BKP_SRAM
+  - !Ram
+    name: SRAM1
     range:
-      start: 0x38800000
-      end: 0x38801000
+      start: 0x24000000
+      end: 0x24020000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x24020000
+      end: 0x24040000
+    cores:
+    - main
+  - !Ram
+    name: SRAM3
+    range:
+      start: 0x24040000
+      end: 0x24060000
+    cores:
+    - main
+  - !Ram
+    name: SRAM4
+    range:
+      start: 0x24060000
+      end: 0x24072000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM1
+    range:
+      start: 0x30000000
+      end: 0x30004000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM2
+    range:
+      start: 0x30004000
+      end: 0x30008000
     cores:
     - main
   flash_algorithms:
@@ -1878,28 +2463,14 @@ variants:
       psel: 0x0
   memory_map:
   - !Ram
-    name: DTCM_RAM
+    name: ITCM
     range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: AXI_SRAM
-    range:
-      start: 0x24000000
-      end: 0x24072000
-    cores:
-    - main
-  - !Ram
-    name: AHB_SRAM
-    range:
-      start: 0x30000000
-      end: 0x30008000
+      start: 0x0
+      end: 0x30000
     cores:
     - main
   - !Nvm
-    name: Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -1908,18 +2479,53 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: ITCM_RAM
+  - !Ram
+    name: DTCM
     range:
-      start: 0x0
-      end: 0x10000
+      start: 0x20000000
+      end: 0x20030000
     cores:
     - main
-  - !Generic
-    name: BKP_SRAM
+  - !Ram
+    name: SRAM1
     range:
-      start: 0x38800000
-      end: 0x38801000
+      start: 0x24000000
+      end: 0x24020000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x24020000
+      end: 0x24040000
+    cores:
+    - main
+  - !Ram
+    name: SRAM3
+    range:
+      start: 0x24040000
+      end: 0x24060000
+    cores:
+    - main
+  - !Ram
+    name: SRAM4
+    range:
+      start: 0x24060000
+      end: 0x24072000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM1
+    range:
+      start: 0x30000000
+      end: 0x30004000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM2
+    range:
+      start: 0x30004000
+      end: 0x30008000
     cores:
     - main
   flash_algorithms:
@@ -1936,28 +2542,14 @@ variants:
       psel: 0x0
   memory_map:
   - !Ram
-    name: DTCM_RAM
+    name: ITCM
     range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: AXI_SRAM
-    range:
-      start: 0x24000000
-      end: 0x24072000
-    cores:
-    - main
-  - !Ram
-    name: AHB_SRAM
-    range:
-      start: 0x30000000
-      end: 0x30008000
+      start: 0x0
+      end: 0x30000
     cores:
     - main
   - !Nvm
-    name: Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -1966,18 +2558,53 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: ITCM_RAM
+  - !Ram
+    name: DTCM
     range:
-      start: 0x0
-      end: 0x10000
+      start: 0x20000000
+      end: 0x20030000
     cores:
     - main
-  - !Generic
-    name: BKP_SRAM
+  - !Ram
+    name: SRAM1
     range:
-      start: 0x38800000
-      end: 0x38801000
+      start: 0x24000000
+      end: 0x24020000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x24020000
+      end: 0x24040000
+    cores:
+    - main
+  - !Ram
+    name: SRAM3
+    range:
+      start: 0x24040000
+      end: 0x24060000
+    cores:
+    - main
+  - !Ram
+    name: SRAM4
+    range:
+      start: 0x24060000
+      end: 0x24072000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM1
+    range:
+      start: 0x30000000
+      end: 0x30004000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM2
+    range:
+      start: 0x30004000
+      end: 0x30008000
     cores:
     - main
   flash_algorithms:
@@ -1994,28 +2621,14 @@ variants:
       psel: 0x0
   memory_map:
   - !Ram
-    name: DTCM_RAM
+    name: ITCM
     range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: AXI_SRAM
-    range:
-      start: 0x24000000
-      end: 0x24072000
-    cores:
-    - main
-  - !Ram
-    name: AHB_SRAM
-    range:
-      start: 0x30000000
-      end: 0x30008000
+      start: 0x0
+      end: 0x30000
     cores:
     - main
   - !Nvm
-    name: Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -2024,18 +2637,53 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: ITCM_RAM
+  - !Ram
+    name: DTCM
     range:
-      start: 0x0
-      end: 0x10000
+      start: 0x20000000
+      end: 0x20030000
     cores:
     - main
-  - !Generic
-    name: BKP_SRAM
+  - !Ram
+    name: SRAM1
     range:
-      start: 0x38800000
-      end: 0x38801000
+      start: 0x24000000
+      end: 0x24020000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x24020000
+      end: 0x24040000
+    cores:
+    - main
+  - !Ram
+    name: SRAM3
+    range:
+      start: 0x24040000
+      end: 0x24060000
+    cores:
+    - main
+  - !Ram
+    name: SRAM4
+    range:
+      start: 0x24060000
+      end: 0x24072000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM1
+    range:
+      start: 0x30000000
+      end: 0x30004000
+    cores:
+    - main
+  - !Ram
+    name: AHB_SRAM2
+    range:
+      start: 0x30004000
+      end: 0x30008000
     cores:
     - main
   flash_algorithms:

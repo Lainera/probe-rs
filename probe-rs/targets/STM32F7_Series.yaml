@@ -13,22 +13,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20040000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
@@ -37,15 +23,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x240000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20040000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x2_512
   - stm32f7x2tcm_512
@@ -65,22 +56,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20040000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
@@ -89,15 +66,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x240000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20040000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x2_512
   - stm32f7x2tcm_512
@@ -117,22 +99,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20040000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
@@ -141,15 +109,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x280000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20040000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x2_512
   - stm32f7x2tcm_512
@@ -169,22 +142,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20040000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
@@ -193,15 +152,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x280000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20040000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x2_512
   - stm32f7x2tcm_512
@@ -221,22 +185,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20040000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
@@ -245,15 +195,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x240000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20040000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x2_512
   - stm32f7x2tcm_512
@@ -273,22 +228,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20040000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
@@ -297,15 +238,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x280000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20040000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x2_512
   - stm32f7x2tcm_512
@@ -325,22 +271,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20040000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
@@ -349,15 +281,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x240000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20040000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x2_512
   - stm32f7x2tcm_512
@@ -377,22 +314,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20040000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
@@ -401,15 +324,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x280000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20040000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x2_512
   - stm32f7x2tcm_512
@@ -429,22 +357,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20040000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
@@ -453,15 +367,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x240000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20040000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x2_512
   - stm32f7x2tcm_512
@@ -481,22 +400,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20040000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
@@ -505,15 +410,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x280000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20040000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x2_512
   - stm32f7x2tcm_512
@@ -533,22 +443,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20040000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
@@ -557,15 +453,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x240000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20040000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x2_512
   - stm32f7x2tcm_512
@@ -585,22 +486,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20040000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
@@ -609,15 +496,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x240000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20040000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x2_512
   - stm32f7x2tcm_512
@@ -637,22 +529,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20040000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
@@ -661,15 +539,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x280000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20040000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x2_512
   - stm32f7x2tcm_512
@@ -689,22 +572,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20040000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
@@ -713,15 +582,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x280000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20040000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x2_512
   - stm32f7x2tcm_512
@@ -741,22 +615,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20040000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
@@ -765,15 +625,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x240000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20040000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x2_512
   - stm32f7x2tcm_512
@@ -793,22 +658,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20040000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
@@ -817,15 +668,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x240000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20040000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x2_512
   - stm32f7x2tcm_512
@@ -845,22 +701,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20040000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
@@ -869,15 +711,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x280000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20040000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x2_512
   - stm32f7x2tcm_512
@@ -897,22 +744,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20040000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
@@ -921,15 +754,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x280000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20040000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x2_512
   - stm32f7x2tcm_512
@@ -949,22 +787,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20040000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
@@ -973,15 +797,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x240000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20040000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x2_512
   - stm32f7x2tcm_512
@@ -1001,22 +830,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20040000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
@@ -1025,15 +840,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x240000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20040000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x2_512
   - stm32f7x2tcm_512
@@ -1053,22 +873,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20040000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
@@ -1077,15 +883,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x280000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20040000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x2_512
   - stm32f7x2tcm_512
@@ -1105,22 +916,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20040000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
@@ -1129,15 +926,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x280000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20040000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x2_512
   - stm32f7x2tcm_512
@@ -1157,22 +959,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20040000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -1181,15 +969,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x210000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20040000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_64_axi
   - stm32f7x_64_tcm
@@ -1209,22 +1002,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20040000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -1233,15 +1012,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x210000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20040000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_64_axi
   - stm32f7x_64_tcm
@@ -1261,22 +1045,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20040000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -1285,15 +1055,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x210000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20040000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_64_axi
   - stm32f7x_64_tcm
@@ -1313,22 +1088,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20040000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -1337,15 +1098,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x210000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20040000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_64_axi
   - stm32f7x_64_tcm
@@ -1365,22 +1131,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20040000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
@@ -1389,15 +1141,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x280000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20040000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x2_512
   - stm32f7x2tcm_512
@@ -1417,22 +1174,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20040000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
@@ -1441,15 +1184,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x280000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20040000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x2_512
   - stm32f7x2tcm_512
@@ -1469,22 +1217,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20040000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
@@ -1493,15 +1227,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x280000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20040000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x2_512
   - stm32f7x2tcm_512
@@ -1521,22 +1260,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20040000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
@@ -1545,15 +1270,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x280000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20040000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x2_512
   - stm32f7x2tcm_512
@@ -1573,22 +1303,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20040000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
@@ -1597,15 +1313,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x280000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20040000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x2_512
   - stm32f7x2tcm_512
@@ -1625,22 +1346,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20040000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
@@ -1649,15 +1356,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x280000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20040000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x2_512
   - stm32f7x2tcm_512
@@ -1677,22 +1389,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20040000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
@@ -1701,15 +1399,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x280000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20040000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x2_512
   - stm32f7x2tcm_512
@@ -1729,22 +1432,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20040000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
@@ -1753,15 +1442,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x280000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20040000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x2_512
   - stm32f7x2tcm_512
@@ -1781,22 +1475,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20040000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
@@ -1805,15 +1485,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x280000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20040000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x2_512
   - stm32f7x2tcm_512
@@ -1833,22 +1518,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20040000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
@@ -1857,15 +1528,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x280000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20040000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x2_512
   - stm32f7x2tcm_512
@@ -1885,22 +1561,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20040000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
@@ -1909,15 +1571,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x280000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20040000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x2_512
   - stm32f7x2tcm_512
@@ -1937,22 +1604,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20050000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
@@ -1961,15 +1614,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x280000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20050000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -1989,22 +1647,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20050000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
@@ -2013,15 +1657,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x280000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20050000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -2041,22 +1690,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20050000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
@@ -2065,15 +1700,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x300000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20050000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -2093,22 +1733,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20050000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
@@ -2117,15 +1743,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x300000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20050000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -2145,22 +1776,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20050000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
@@ -2169,15 +1786,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x280000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20050000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -2197,22 +1819,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20050000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
@@ -2221,15 +1829,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x280000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20050000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -2249,22 +1862,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20050000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
@@ -2273,15 +1872,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x300000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20050000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -2301,22 +1905,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20050000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
@@ -2325,15 +1915,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x300000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20050000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -2353,22 +1948,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20050000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
@@ -2377,15 +1958,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x280000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20050000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -2405,22 +1991,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20050000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
@@ -2429,15 +2001,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x300000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20050000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -2457,22 +2034,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20050000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
@@ -2481,15 +2044,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x280000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20050000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -2509,22 +2077,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20050000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
@@ -2533,15 +2087,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x300000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20050000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -2561,22 +2120,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20050000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
@@ -2585,15 +2130,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x280000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20050000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -2613,22 +2163,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20050000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
@@ -2637,15 +2173,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x280000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20050000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -2665,22 +2206,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20050000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
@@ -2689,15 +2216,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x300000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20050000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -2717,22 +2249,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20050000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
@@ -2741,15 +2259,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x300000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20050000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -2769,22 +2292,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20050000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
@@ -2793,15 +2302,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x280000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20050000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -2821,22 +2335,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20050000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
@@ -2845,15 +2345,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x300000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20050000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -2873,22 +2378,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20050000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
@@ -2897,15 +2388,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x280000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20050000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -2925,22 +2421,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20050000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
@@ -2949,15 +2431,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x280000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20050000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -2977,22 +2464,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20050000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
@@ -3001,15 +2474,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x300000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20050000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -3029,22 +2507,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20050000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
@@ -3053,15 +2517,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x300000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20050000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -3081,22 +2550,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20050000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
@@ -3105,15 +2560,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x280000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20050000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -3133,22 +2593,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20050000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
@@ -3157,15 +2603,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x280000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20050000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -3185,22 +2636,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20050000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
@@ -3209,15 +2646,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x300000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20050000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -3237,22 +2679,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20050000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
@@ -3261,15 +2689,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x300000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20050000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -3289,22 +2722,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20050000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -3313,15 +2732,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x210000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20050000
+    cores:
+    - main
   flash_algorithms:
   - stm32f75x_64_axi
   - stm32f75x_64_tcm
@@ -3341,22 +2765,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20050000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -3365,15 +2775,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x210000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20050000
+    cores:
+    - main
   flash_algorithms:
   - stm32f75x_64_axi
   - stm32f75x_64_tcm
@@ -3393,22 +2808,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20050000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
@@ -3417,15 +2818,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x210000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20050000
+    cores:
+    - main
   flash_algorithms:
   - stm32f75x_64_axi
   - stm32f75x_64_tcm
@@ -3445,22 +2851,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20050000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
@@ -3469,15 +2861,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x300000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20050000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -3497,22 +2894,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20050000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
@@ -3521,15 +2904,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x300000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20050000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -3549,22 +2937,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20050000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
@@ -3573,15 +2947,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x300000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20050000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -3601,22 +2980,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20050000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
@@ -3625,15 +2990,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x300000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20050000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -3653,22 +3023,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20050000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
@@ -3677,15 +3033,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x300000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20050000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -3705,22 +3066,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20050000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
@@ -3729,15 +3076,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x300000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20050000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -3757,22 +3109,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20050000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
@@ -3781,15 +3119,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x300000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20050000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -3809,22 +3152,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20010000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20010000
-      end: 0x20050000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
@@ -3833,15 +3162,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x300000
+      start: 0x20000000
+      end: 0x20010000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20010000
+      end: 0x20050000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -3861,22 +3195,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
@@ -3885,15 +3205,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x300000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -3915,22 +3240,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8200000
@@ -3939,15 +3250,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x400000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7x_2048dual
@@ -3969,22 +3285,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
@@ -3993,15 +3295,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x300000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -4023,22 +3330,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
@@ -4047,15 +3340,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x300000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -4077,22 +3375,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8200000
@@ -4101,15 +3385,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x400000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7x_2048dual
@@ -4131,22 +3420,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8200000
@@ -4155,15 +3430,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x400000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7x_2048dual
@@ -4185,22 +3465,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
@@ -4209,15 +3475,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x300000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -4239,22 +3510,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8200000
@@ -4263,15 +3520,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x400000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7x_2048dual
@@ -4293,22 +3555,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
@@ -4317,15 +3565,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x300000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -4347,22 +3600,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
@@ -4371,15 +3610,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x300000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -4401,22 +3645,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8200000
@@ -4425,15 +3655,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x400000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7x_2048dual
@@ -4455,22 +3690,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8200000
@@ -4479,15 +3700,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x400000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7x_2048dual
@@ -4509,22 +3735,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
@@ -4533,15 +3745,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x300000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -4563,22 +3780,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8200000
@@ -4587,15 +3790,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x400000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7x_2048dual
@@ -4617,22 +3825,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
@@ -4641,15 +3835,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x300000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -4671,22 +3870,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8200000
@@ -4695,15 +3880,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x400000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7x_2048dual
@@ -4725,22 +3915,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
@@ -4749,15 +3925,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x300000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -4779,22 +3960,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
@@ -4803,15 +3970,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x300000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -4833,22 +4005,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8200000
@@ -4857,15 +4015,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x400000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7x_2048dual
@@ -4887,22 +4050,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8200000
@@ -4911,15 +4060,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x400000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7x_2048dual
@@ -4941,22 +4095,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
@@ -4965,15 +4105,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x300000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -4995,22 +4140,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8200000
@@ -5019,15 +4150,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x400000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7x_2048dual
@@ -5049,22 +4185,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
@@ -5073,15 +4195,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x300000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -5103,22 +4230,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
@@ -5127,15 +4240,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x300000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -5157,22 +4275,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8200000
@@ -5181,15 +4285,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x400000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7x_2048dual
@@ -5211,22 +4320,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8200000
@@ -5235,15 +4330,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x400000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7x_2048dual
@@ -5265,22 +4365,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
@@ -5289,15 +4375,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x300000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -5319,22 +4410,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8200000
@@ -5343,15 +4420,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x400000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7x_2048dual
@@ -5373,22 +4455,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8200000
@@ -5397,15 +4465,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x400000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7x_2048dual
@@ -5427,22 +4500,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
@@ -5451,15 +4510,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x300000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7x_1024dual
@@ -5481,22 +4545,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8200000
@@ -5505,15 +4555,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x400000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7x_2048dual
@@ -5535,22 +4590,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
@@ -5559,15 +4600,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x300000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -5589,22 +4635,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8200000
@@ -5613,15 +4645,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x400000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7x_2048dual
@@ -5643,22 +4680,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
@@ -5667,15 +4690,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x300000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -5697,22 +4725,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8200000
@@ -5721,15 +4735,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x400000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7x_2048dual
@@ -5751,22 +4770,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8100000
@@ -5775,15 +4780,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x300000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7xtcm_2048
@@ -5805,22 +4815,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8200000
@@ -5829,15 +4825,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x400000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7x_2048dual
@@ -5859,22 +4860,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8200000
@@ -5883,15 +4870,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x400000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7x_2048dual
@@ -5913,22 +4905,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8200000
@@ -5937,15 +4915,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x400000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7x_2048dual
@@ -5967,22 +4950,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8200000
@@ -5991,15 +4960,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x400000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7x_2048dual
@@ -6021,22 +4995,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8200000
@@ -6045,15 +5005,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x400000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7x_2048dual
@@ -6075,22 +5040,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8200000
@@ -6099,15 +5050,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x400000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7x_2048dual
@@ -6129,22 +5085,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8200000
@@ -6153,15 +5095,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x400000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7x_2048dual
@@ -6183,22 +5130,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8200000
@@ -6207,15 +5140,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x400000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7x_2048dual
@@ -6237,22 +5175,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8200000
@@ -6261,15 +5185,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x400000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7x_2048dual
@@ -6291,22 +5220,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8200000
@@ -6315,15 +5230,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x400000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7x_2048dual
@@ -6345,22 +5265,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8200000
@@ -6369,15 +5275,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x400000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7x_2048dual
@@ -6399,22 +5310,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8200000
@@ -6423,15 +5320,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x400000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7x_2048dual
@@ -6453,22 +5355,8 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: IRAM2
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
-  - !Ram
-    name: IRAM1
-    range:
-      start: 0x20020000
-      end: 0x20080000
-    cores:
-    - main
   - !Nvm
-    name: IROM1
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8200000
@@ -6477,15 +5365,20 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
-    name: IROM2
+  - !Ram
+    name: DTCM
     range:
-      start: 0x200000
-      end: 0x400000
+      start: 0x20000000
+      end: 0x20020000
     cores:
     - main
-    access:
-      write: false
+  - !Ram
+    name: SRAM
+    range:
+      start: 0x20020000
+      end: 0x20080000
+    cores:
+    - main
   flash_algorithms:
   - stm32f7x_2048
   - stm32f7x_2048dual

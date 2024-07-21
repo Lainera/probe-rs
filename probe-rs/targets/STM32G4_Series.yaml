@@ -3,7 +3,7 @@ manufacturer:
   id: 0x20
   cc: 0x0
 generated_from_pack: true
-pack_file_release: 1.5.0
+pack_file_release: 1.6.0
 variants:
 - name: STM32G431C6Tx
   cores:
@@ -13,22 +13,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20008000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8008000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10002800
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20004000
+      end: 0x20005800
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20005800
+      end: 0x20008000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -41,22 +63,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20008000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8008000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10002800
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20004000
+      end: 0x20005800
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20005800
+      end: 0x20008000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -69,22 +113,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20008000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10002800
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20004000
+      end: 0x20005800
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20005800
+      end: 0x20008000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -97,22 +163,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20008000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10002800
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20004000
+      end: 0x20005800
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20005800
+      end: 0x20008000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -125,24 +213,46 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20008000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8020000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10002800
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20004000
+      end: 0x20005800
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20005800
+      end: 0x20008000
+    cores:
+    - main
   flash_algorithms:
-  - stm32g4xx_128
+  - stm32g47x-8x_512
   - stm32g4xx_sb_opt
   - mt25ql512abb_stm32g474e-eval
 - name: STM32G431CBUx
@@ -153,24 +263,46 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20008000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8020000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10002800
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20004000
+      end: 0x20005800
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20005800
+      end: 0x20008000
+    cores:
+    - main
   flash_algorithms:
-  - stm32g4xx_128
+  - stm32g47x-8x_512
   - stm32g4xx_sb_opt
   - mt25ql512abb_stm32g474e-eval
 - name: STM32G431CBYx
@@ -181,24 +313,46 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20008000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8020000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10002800
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20004000
+      end: 0x20005800
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20005800
+      end: 0x20008000
+    cores:
+    - main
   flash_algorithms:
-  - stm32g4xx_128
+  - stm32g47x-8x_512
   - stm32g4xx_sb_opt
   - mt25ql512abb_stm32g474e-eval
 - name: STM32G431K6Tx
@@ -209,22 +363,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20008000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8008000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10002800
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20004000
+      end: 0x20005800
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20005800
+      end: 0x20008000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -237,22 +413,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20008000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8008000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10002800
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20004000
+      end: 0x20005800
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20005800
+      end: 0x20008000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -265,22 +463,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20008000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10002800
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20004000
+      end: 0x20005800
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20005800
+      end: 0x20008000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -293,22 +513,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20008000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10002800
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20004000
+      end: 0x20005800
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20005800
+      end: 0x20008000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -321,24 +563,46 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20008000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8020000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10002800
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20004000
+      end: 0x20005800
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20005800
+      end: 0x20008000
+    cores:
+    - main
   flash_algorithms:
-  - stm32g4xx_128
+  - stm32g47x-8x_512
   - stm32g4xx_sb_opt
   - mt25ql512abb_stm32g474e-eval
 - name: STM32G431KBUx
@@ -349,24 +613,46 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20008000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8020000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10002800
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20004000
+      end: 0x20005800
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20005800
+      end: 0x20008000
+    cores:
+    - main
   flash_algorithms:
-  - stm32g4xx_128
+  - stm32g47x-8x_512
   - stm32g4xx_sb_opt
   - mt25ql512abb_stm32g474e-eval
 - name: STM32G431M6Tx
@@ -377,22 +663,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20008000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8008000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10002800
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20004000
+      end: 0x20005800
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20005800
+      end: 0x20008000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -405,22 +713,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20008000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10002800
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20004000
+      end: 0x20005800
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20005800
+      end: 0x20008000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -433,24 +763,46 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20008000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8020000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10002800
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20004000
+      end: 0x20005800
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20005800
+      end: 0x20008000
+    cores:
+    - main
   flash_algorithms:
-  - stm32g4xx_128
+  - stm32g47x-8x_512
   - stm32g4xx_sb_opt
   - mt25ql512abb_stm32g474e-eval
 - name: STM32G431R6Ix
@@ -461,22 +813,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20008000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8008000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10002800
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20004000
+      end: 0x20005800
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20005800
+      end: 0x20008000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -489,22 +863,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20008000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8008000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10002800
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20004000
+      end: 0x20005800
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20005800
+      end: 0x20008000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -517,22 +913,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20008000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10002800
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20004000
+      end: 0x20005800
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20005800
+      end: 0x20008000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -545,22 +963,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20008000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10002800
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20004000
+      end: 0x20005800
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20005800
+      end: 0x20008000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -573,24 +1013,46 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20008000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8020000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10002800
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20004000
+      end: 0x20005800
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20005800
+      end: 0x20008000
+    cores:
+    - main
   flash_algorithms:
-  - stm32g4xx_128
+  - stm32g47x-8x_512
   - stm32g4xx_sb_opt
   - mt25ql512abb_stm32g474e-eval
 - name: STM32G431RBTx
@@ -601,24 +1063,46 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20008000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8020000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10002800
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20004000
+      end: 0x20005800
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20005800
+      end: 0x20008000
+    cores:
+    - main
   flash_algorithms:
-  - stm32g4xx_128
+  - stm32g47x-8x_512
   - stm32g4xx_sb_opt
   - mt25ql512abb_stm32g474e-eval
 - name: STM32G431V6Tx
@@ -629,22 +1113,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20008000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8008000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10002800
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20004000
+      end: 0x20005800
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20005800
+      end: 0x20008000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -657,22 +1163,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20008000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8010000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10002800
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20004000
+      end: 0x20005800
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20005800
+      end: 0x20008000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -685,24 +1213,46 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20008000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8020000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10002800
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20004000
+      end: 0x20005800
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20005800
+      end: 0x20008000
+    cores:
+    - main
   flash_algorithms:
-  - stm32g4xx_128
+  - stm32g47x-8x_512
   - stm32g4xx_sb_opt
   - mt25ql512abb_stm32g474e-eval
 - name: STM32G441CBTx
@@ -713,22 +1263,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20008000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8020000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10002800
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20004000
+      end: 0x20005800
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20005800
+      end: 0x20008000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -741,22 +1313,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20008000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8020000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10002800
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20004000
+      end: 0x20005800
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20005800
+      end: 0x20008000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -769,22 +1363,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20008000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8020000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10002800
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20004000
+      end: 0x20005800
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20005800
+      end: 0x20008000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -797,22 +1413,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20008000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8020000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10002800
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20004000
+      end: 0x20005800
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20005800
+      end: 0x20008000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -825,22 +1463,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20008000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8020000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10002800
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20004000
+      end: 0x20005800
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20005800
+      end: 0x20008000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -853,22 +1513,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20008000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8020000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10002800
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20004000
+      end: 0x20005800
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20005800
+      end: 0x20008000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -881,22 +1563,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20008000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8020000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10002800
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20004000
+      end: 0x20005800
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20005800
+      end: 0x20008000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -909,22 +1613,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20008000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8020000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10002800
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20004000
+      end: 0x20005800
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20005800
+      end: 0x20008000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -937,22 +1663,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20008000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8020000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10002800
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20004000
+      end: 0x20005800
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20005800
+      end: 0x20008000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -965,22 +1713,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -993,22 +1763,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -1021,22 +1813,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -1049,22 +1863,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -1077,22 +1913,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -1105,22 +1963,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -1133,22 +2013,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -1161,22 +2063,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -1189,22 +2113,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -1217,22 +2163,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -1245,22 +2213,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -1273,22 +2263,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -1301,22 +2313,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -1329,22 +2363,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -1357,22 +2413,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -1385,22 +2463,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -1413,22 +2513,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -1441,22 +2563,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8020000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -1469,22 +2613,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8020000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -1497,22 +2663,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -1525,22 +2713,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -1553,22 +2763,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -1581,22 +2813,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -1609,22 +2863,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8020000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -1637,22 +2913,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -1665,22 +2963,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -1693,22 +3013,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -1721,22 +3063,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8020000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -1749,22 +3113,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -1777,22 +3163,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -1805,22 +3213,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8020000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -1833,22 +3263,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -1861,22 +3313,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -1889,22 +3363,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8020000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -1917,22 +3413,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -1945,22 +3463,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -1973,22 +3513,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8020000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -2001,22 +3563,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8020000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -2029,22 +3613,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8020000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -2057,22 +3663,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -2085,22 +3713,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -2113,22 +3763,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -2141,22 +3813,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -2169,22 +3863,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -2197,22 +3913,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -2225,22 +3963,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8020000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -2253,22 +4013,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8020000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -2281,22 +4063,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -2309,22 +4113,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -2337,22 +4163,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -2365,22 +4213,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -2393,22 +4263,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8020000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -2421,22 +4313,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -2449,22 +4363,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -2477,22 +4413,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -2505,22 +4463,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8020000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -2533,22 +4513,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -2561,22 +4563,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -2589,22 +4613,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8020000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -2617,22 +4663,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -2645,22 +4713,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -2673,22 +4763,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8020000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -2701,22 +4813,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -2729,22 +4863,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -2757,22 +4913,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8020000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -2785,22 +4963,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8020000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -2813,22 +5013,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8020000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -2841,22 +5063,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -2869,22 +5113,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -2897,22 +5163,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -2925,22 +5213,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -2953,22 +5263,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -2981,22 +5313,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -3009,22 +5363,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -3037,22 +5413,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -3065,22 +5463,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -3093,22 +5513,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -3121,22 +5563,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -3149,22 +5613,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -3177,22 +5663,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -3205,22 +5713,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -3233,22 +5763,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -3261,22 +5813,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -3289,22 +5863,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -3317,22 +5913,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -3345,22 +5963,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -3373,22 +6013,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -3401,22 +6063,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -3429,22 +6113,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -3457,22 +6163,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -3485,22 +6213,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -3513,22 +6263,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -3541,22 +6313,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20020000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10008000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x20020000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_db_opt
@@ -3569,22 +6363,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x2001c000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x2001c000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -3597,22 +6413,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x2001c000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x2001c000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -3625,22 +6463,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x2001c000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x2001c000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -3653,22 +6513,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x2001c000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x2001c000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -3681,22 +6563,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x2001c000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x2001c000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -3709,22 +6613,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x2001c000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x2001c000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -3737,22 +6663,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x2001c000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x2001c000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -3765,22 +6713,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x2001c000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x2001c000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -3793,22 +6763,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x2001c000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x2001c000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -3821,22 +6813,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x2001c000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x2001c000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -3849,22 +6863,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x2001c000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x2001c000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -3877,22 +6913,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x2001c000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x2001c000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -3905,22 +6963,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x2001c000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x2001c000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -3933,22 +7013,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x2001c000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x2001c000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -3961,22 +7063,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x2001c000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x2001c000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -3989,22 +7113,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x2001c000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8040000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x2001c000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -4017,22 +7163,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x2001c000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x2001c000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -4045,22 +7213,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x2001c000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x2001c000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -4073,22 +7263,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x2001c000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x2001c000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -4101,22 +7313,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x2001c000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x2001c000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -4129,22 +7363,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x2001c000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x2001c000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -4157,22 +7413,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x2001c000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x2001c000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -4185,22 +7463,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x2001c000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x2001c000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -4213,22 +7513,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x2001c000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x2001c000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -4241,22 +7563,44 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x2001c000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x2001c000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
@@ -4269,52 +7613,47 @@ variants:
       ap: 0
       psel: 0x0
   memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x2001c000
-    cores:
-    - main
   - !Nvm
-    name: Main_Flash
+    name: BANK_1
     range:
       start: 0x8000000
       end: 0x8080000
     cores:
     - main
     access:
+      write: false
       boot: true
+  - !Ram
+    name: CCMRAM_ICODE
+    range:
+      start: 0x10000000
+      end: 0x10004000
+    cores:
+    - main
+  - !Ram
+    name: SRAM1
+    range:
+      start: 0x20000000
+      end: 0x20014000
+    cores:
+    - main
+  - !Ram
+    name: SRAM2
+    range:
+      start: 0x20014000
+      end: 0x20018000
+    cores:
+    - main
+  - !Ram
+    name: CCMRAM_DCODE
+    range:
+      start: 0x20018000
+      end: 0x2001c000
+    cores:
+    - main
   flash_algorithms:
   - stm32g47x-8x_512
   - stm32g4xx_sb_opt
-  - mt25ql512abb_stm32g474e-eval
-- name: STM32GBK1CBTx
-  cores:
-  - name: main
-    type: armv7em
-    core_access_options: !Arm
-      ap: 0
-      psel: 0x0
-  memory_map:
-  - !Ram
-    name: SRAM
-    range:
-      start: 0x20000000
-      end: 0x20008000
-    cores:
-    - main
-  - !Nvm
-    name: Main_Flash
-    range:
-      start: 0x8000000
-      end: 0x8020000
-    cores:
-    - main
-    access:
-      boot: true
-  flash_algorithms:
-  - stm32g47x-8x_512
   - mt25ql512abb_stm32g474e-eval
 flash_algorithms:
 - name: stm32g47x-8x_512
@@ -4402,26 +7741,3 @@ flash_algorithms:
     sectors:
     - size: 0x54
       address: 0x0
-- name: stm32g4xx_128
-  description: STM32G4xx 128 Flash
-  default: true
-  instructions: ELUDRnZId0ygYHdIoGAgRgBqwLKqKBfQdEjgYHRI4GAgRgBqIPD/ACBiIEYAakDwqgAgYiBGQGlA9AAwYGEgRkBpQPAAYGBhAL9mSABpAPSAMAAo+dEQvQFGYkhAaUDwAEBgSlBhACBwRwNGASBwRwPgTPL7MFtJCGFaSABpAPSAMAAo9dEEIFZJSGEIRkBpQPSAMEhhAL9SSABpAPSAMAAo+dFPSABpRPL6MQhAILEIRkxJCGEBIHBHSkhAaSDwBABISUhhACD25wFGTPL7MERLGGEYRkBpQPACAFhhRUhIRABogUIJ08oKgDoC8H8CGEZAaUD0AGBYYQfgwfPGIjhIQGkg9ABgNktYYTVIQGkg9H5wM0tYYRhGQGlA6sIAWGEYRkBpQPSAMFhhAL8tSABpAPSAMAAo+dEAvylIAGkA9IAwACj50SZIAGlE8vozGEAgsRhGI0sYYQEgcEchSEBpIPACAB9LWGEAIPbnELUDRsgdIPAHAQC/GkgAaQD0gDAAKPnRTPL7MBZMIGEgRkBpQPABAGBhGOAQaBhgUGhYYAC/D0gAaQD0gDAAKPnRCDMIMgg5C0gAaQDwAQAosUTy+jAHTCBhASAQvQAp5NEESEBpIPABAAJMYGEAIPTnIwFnRQAgAkCrie/NOyoZCH9uXUwEAAAAAAAAAAAABAgAAAAAAAAAAA==
-  pc_init: 0x1
-  pc_uninit: 0x59
-  pc_program_page: 0x16f
-  pc_erase_sector: 0xcb
-  pc_erase_all: 0x71
-  data_section_offset: 0x1f8
-  flash_properties:
-    address_range:
-      start: 0x8000000
-      end: 0x8020000
-    page_size: 0x400
-    erased_byte_value: 0xff
-    program_page_timeout: 400
-    erase_sector_timeout: 400
-    sectors:
-    - size: 0x800
-      address: 0x0
-  cores:
-  - main
